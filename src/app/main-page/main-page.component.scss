@@ -1,7 +1,14 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-.news-item {
-  padding: 10px;
-  margin: 10px;
-  background-color: #fff;
-  width: 100%;
+
+fieldset {
+  display: block;
+  margin-bottom: 10px;
+
+  label {
+    display: block;
+  }
 }

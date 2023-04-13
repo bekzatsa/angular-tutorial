@@ -7,6 +7,9 @@ import { TestComponent } from './test/test.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import {HttpClientModule} from "@angular/common/http";
+import { ProductComponent } from './component/product/product.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { MainPageComponent } from './main-page/main-page.component';
     TestComponent,
     HeaderComponent,
     FooterComponent,
-    MainPageComponent
+    MainPageComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

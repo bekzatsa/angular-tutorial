@@ -1,4 +1,24 @@
-<div class="news-item" *ngFor="let item of data; let i = index;">
-  <h5>{{item.title}}</h5>
-  <p>{{item.description}}</p>
+<div>
+  <fieldset>
+    <label>Product title</label>
+    <input type="text" [(ngModel)]="newProduct.title" (ngModelChange)="changeValue($event)">
+  </fieldset>
+  <fieldset>
+    <label>Description</label>
+    <input type="text" [(ngModel)]="newProduct.description">
+  </fieldset>
+  <fieldset>
+    <label>Price</label>
+    <input type="text" [(ngModel)]="newProduct.price">
+  </fieldset>
+
+  <button type="button" (click)="save()">Save</button>
+</div>
+
+<p>{{newProduct.title}}</p>
+<p>{{newProduct.description}}</p>
+<p>{{newProduct.price}}</p>
+
+<div *ngIf="data.length" class="products">
+  <app-product *ngFor="let item of data;" [product]="item"></app-product>
 </div>
