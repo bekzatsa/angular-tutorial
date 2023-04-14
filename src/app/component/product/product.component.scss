@@ -1,0 +1,17 @@
+.product {
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 15px;
+  width: 200px;
+
+  img {
+    width: 200px;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  h6 {
+    margin: 5px auto;
+    font-size: 18px;
+  }
+}
