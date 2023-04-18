@@ -10,7 +10,9 @@ import {UtilService} from "../../service/util.service";
 export class ProductComponent {
   @Input() product: IProduct;
 
-  constructor(private util: UtilService) {
+  constructor(
+    private util: UtilService
+  ) {
   }
 
   method() {
