@@ -19,6 +19,8 @@
 <p>{{newProduct.description}}</p>
 <p>{{newProduct.price}}</p>
 
+<input type="text" [(ngModel)]="searchText">
+<p [appHighlight]="searchText">{{searchText}}</p>
 <div *ngIf="data.length" class="products">
-  <app-product *ngFor="let item of data;" [product]="item"></app-product>
+  <app-product *ngFor="let item of (data | search : searchText); let index = index;" [product]="item"></app-product>
 </div>

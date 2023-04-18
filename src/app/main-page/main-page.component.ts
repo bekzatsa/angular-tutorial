@@ -15,13 +15,18 @@ export class MainPageComponent implements  OnInit{
     title: '',
     description: '',
     price: 0,
-    thumbnail: 'https://i.dummyjson.com/data/products/1/4.jpg'
+    thumbnail: 'https://i.dummyjson.com/data/products/1/4.jpg',
+    date: null
   };
+  searchText: string = '';
 
   constructor(private http: HttpClient) {
     /// action
     http.get('https://dummyjson.com/products')
       .subscribe((data: any) => {
+        data.products.forEach((item: any) => {
+          item['date'] = 1681728987;
+        })
         this.data = data.products as IProduct[];
         console.log(this.data);
       })

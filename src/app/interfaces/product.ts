@@ -3,5 +3,6 @@ export interface IProduct {
   title: string,
   description: string,
   thumbnail: string,
-  price: number
+  price: number,
+  date?: number | any
 }

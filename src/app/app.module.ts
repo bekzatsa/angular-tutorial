@@ -10,6 +10,8 @@ import { MainPageComponent } from './main-page/main-page.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ProductComponent } from './component/product/product.component';
 import {FormsModule} from "@angular/forms";
+import {SearchPipe} from "./pipe/search.pipe";
+import {HighlightDirective} from "./directive/highlight.directive";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {FormsModule} from "@angular/forms";
     HeaderComponent,
     FooterComponent,
     MainPageComponent,
-    ProductComponent
+    ProductComponent,
+    SearchPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

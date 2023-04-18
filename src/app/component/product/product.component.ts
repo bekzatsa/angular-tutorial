@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {IProduct} from "../../interfaces/product";
+import {UtilService} from "../../service/util.service";
 
 @Component({
   selector: 'app-product',
@@ -8,5 +9,12 @@ import {IProduct} from "../../interfaces/product";
 })
 export class ProductComponent {
   @Input() product: IProduct;
+
+  constructor(private util: UtilService) {
+  }
+
+  method() {
+    this.util.uppercase('ees');
+  }
 
 }
