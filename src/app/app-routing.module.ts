@@ -16,9 +16,14 @@ const routes: Routes = [
     title: 'Main Page'
   },
   {
-    path: 'create-product',
-    component: ProductEditComponent,
-    title: 'New Product'
+    path: 'products',
+    children: [
+      {
+        path: 'create-product',
+        component: ProductEditComponent,
+        title: 'New Product'
+      },
+    ]
   }
 
 ];
