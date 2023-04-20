@@ -1,24 +1,3 @@
-<div>
-  <fieldset>
-    <label>Product title</label>
-    <input type="text" [(ngModel)]="newProduct.title" (ngModelChange)="changeValue($event)">
-  </fieldset>
-  <fieldset>
-    <label>Description</label>
-    <input type="text" [(ngModel)]="newProduct.description">
-  </fieldset>
-  <fieldset>
-    <label>Price</label>
-    <input type="text" [(ngModel)]="newProduct.price">
-  </fieldset>
-
-  <button type="button" (click)="save()">Save</button>
-</div>
-
-<p>{{newProduct.title}}</p>
-<p>{{newProduct.description}}</p>
-<p>{{newProduct.price}}</p>
-
 <input type="text" [(ngModel)]="searchText">
 <p [appHighlight]="searchText">{{searchText}}</p>
 <div *ngIf="data.length" class="products">

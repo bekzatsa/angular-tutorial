@@ -9,9 +9,10 @@ import { FooterComponent } from './component/footer/footer.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ProductComponent } from './component/product/product.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SearchPipe} from "./pipe/search.pipe";
 import {HighlightDirective} from "./directive/highlight.directive";
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,15 @@ import {HighlightDirective} from "./directive/highlight.directive";
     MainPageComponent,
     ProductComponent,
     SearchPipe,
-    HighlightDirective
+    HighlightDirective,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
